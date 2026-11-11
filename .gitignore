@@ -1,0 +1,28 @@
+# Local Python environments and generated files
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local PyCharm and operating-system files
+.idea/
+.DS_Store
+Thumbs.db
+
+# Employee documents and other PDF inputs/outputs
+*.pdf
+Renamed_PDFs/
+
+# Private contact books and generated reports
+contacts.csv
+split_report*.csv
+
+# Local secrets and archives
+.env
+.env.*
+!.env.example
+*.zip
