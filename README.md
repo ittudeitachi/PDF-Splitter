@@ -1,7 +1,7 @@
 # PDF Splitter
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ittudeitachi/PDF-Splitter/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ittudeitachi/PDF-Splitter/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/ittudeitachi/PDF-Splitter?label=Release)](https://github.com/ittudeitachi/PDF-Splitter/releases)
 
 PDF Splitter is a Python command-line tool for splitting multi-page PDF allocation documents into separate, clearly named files.
