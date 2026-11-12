@@ -4,13 +4,13 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ittudeitachi/PDF-Splitter/blob/main/LICENSE.txt)
 [![GitHub release](https://img.shields.io/github/v/release/ittudeitachi/PDF-Splitter?label=Release)](https://github.com/ittudeitachi/PDF-Splitter/releases)
 
-PDFSplitter is a Python command-line tool for splitting multi-page PDF allocation documents into separate, clearly named files.
+PDF Splitter is a Python command-line tool for splitting multi-page PDF allocation documents into separate, clearly named files.
 
 It extracts employee names and job titles from supported documents, optionally checks them against a local contactbook, and generates a report so you can review uncertain results.
 
 ## What It Does
 
-PDFSplitter processes a PDF page by page and provides:
+PDF Splitter processes a PDF page by page and provides:
 
 - Individual PDF files for each page
 - Employee name and job title extraction
@@ -22,11 +22,11 @@ PDFSplitter processes a PDF page by page and provides:
 - Duplicate filename protection to avoid overwriting existing files
 - A dry-run mode to preview filenames without creating files
 
-When a document contains a historical job title, PDFSplitter can preserve that title even if the contactbook shows a newer one.
+When a document contains a historical job title, PDF Splitter can preserve that title even if the contactbook shows a newer one.
 
 ## What It Does Not Do Yet
 
-PDFSplitter does not perform OCR. Scanned or image-only PDFs need a searchable text layer before employee details can be extracted reliably.
+PDF Splitter does not perform OCR. Scanned or image-only PDFs need a searchable text layer before employee details can be extracted reliably.
 
 It is designed for supported allocation document layouts, not arbitrary PDF forms. Unrecognized document types and uncertain matches are flagged for manual review rather than silently assumed to be correct.
 
@@ -110,20 +110,20 @@ python -m pip install -r requirements.txt
 Copy `.env.example` to `.env` in the project root:
 
 ```dotenv
-PDFSPLITTER_INPUT_DIR=.
-PDFSPLITTER_INPUT_FILE=ALL.pdf
+PDF Splitter_INPUT_DIR=.
+PDF Splitter_INPUT_FILE=ALL.pdf
 
-PDFSPLITTER_CONTACTS_DIR=.
-PDFSPLITTER_CONTACTS_FILE=contacts.csv
+PDF Splitter_CONTACTS_DIR=.
+PDF Splitter_CONTACTS_FILE=contacts.csv
 
-PDFSPLITTER_OUTPUT_DIR=Renamed_PDFs
+PDF Splitter_OUTPUT_DIR=Renamed_PDFs
 ```
 
 The defaults expect `ALL.pdf` and, optionally, `contacts.csv` in the project folder. Output files are written to `Renamed_PDFs`.
 
-- `PDFSPLITTER_INPUT_DIR` and `PDFSPLITTER_INPUT_FILE` select the source PDF.
-- `PDFSPLITTER_CONTACTS_DIR` and `PDFSPLITTER_CONTACTS_FILE` select the contactbook.
-- `PDFSPLITTER_OUTPUT_DIR` selects the output folder.
+- `PDF Splitter_INPUT_DIR` and `PDF Splitter_INPUT_FILE` select the source PDF.
+- `PDF Splitter_CONTACTS_DIR` and `PDF Splitter_CONTACTS_FILE` select the contactbook.
+- `PDF Splitter_OUTPUT_DIR` selects the output folder.
 
 You can use absolute paths or relative directory paths on Windows, macOS, and Linux. Configured relative directories resolve from the project folder, not the terminal's current working directory. The output directory is created automatically when needed.
 
@@ -137,13 +137,13 @@ Alex Morgan,Accountant
 Jordan Taylor,Senior Butler
 ```
 
-If the contacts file is missing, PDFSplitter continues using information extracted from the PDF without contactbook verification.
+If the contacts file is missing, PDF Splitter continues using information extracted from the PDF without contactbook verification.
 
 **Privacy:** Keep real employee PDFs, `contacts.csv`, and `.env` on your machine. Do not commit them to a public repository.
 
 ## Usage
 
-Run PDFSplitter with the configured paths:
+Run PDF Splitter with the configured paths:
 
 ```bash
 python main.py
@@ -171,7 +171,7 @@ After processing, check the generated PDFs and `split_report.csv` inside your ou
 
 The report marks each page as `OK`, `REVIEW`, or `ERROR`. A `REVIEW` status indicates that the filename or extracted details should be checked; it does not necessarily mean PDF splitting failed.
 
-If a filename already exists, PDFSplitter adds a number rather than overwriting it. Existing processing reports are also preserved.
+If a filename already exists, PDF Splitter adds a number rather than overwriting it. Existing processing reports are also preserved.
 
 ## Project Structure
 
