@@ -210,4 +210,4 @@ These are possible enhancements, not features included in the current release.
 
 ## License
 
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
