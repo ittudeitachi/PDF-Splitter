@@ -1,4 +1,4 @@
-# PDFSplitter
+# PDF Splitter
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ittudeitachi/PDF-Splitter/blob/main/LICENSE.txt)
